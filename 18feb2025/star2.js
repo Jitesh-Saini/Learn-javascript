@@ -1,29 +1,30 @@
+
 function pattern() {
-    var n = document.getElementById("n1").value;
-    let output = "";
-    var i, j;
-    for (i = 1; i <= n; i++) {
-        for (j = 1; j <= i; j++) {
-           if(i<=(n/2)){
-            output = output + "* ";
-           }
+    let n = document.getElementById("n1").value;
+  
+     star= "";
+    for(i = 1; i <= n; i++) {
+      for(j = 1; j <= i; j++) {
+        star = star + "*";
+        console.log(star);
         }
-        for(k=n; k>i; k--){
-            if(i>(n/2)){
-                output = output + "* "; 
-            }
+        star = star + "\n";
+      }
+
+      // reverse print of star
+      for(let k = n -1 ; k >=1 ; k--){
+        for(let l= 1 ; l <= k ; l++){
+          star = star + "*";
         }
-        output = output + "<br>";
-    }
-    
- 
+        star = star + '\n';
+      }
+      document.getElementById("result").innerText = star;
 
-    document.getElementById("result").innerHTML = output;
-}
-function clearr(){
-    return(
-        document.getElementById("n1").value = "",
-        document.getElementById("result").innerHTML = ""
-    );
+      
+  }
 
-}
+
+  function clearr() {
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("n1").value = "";
+} 
