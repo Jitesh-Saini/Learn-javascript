@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="home">
+        <div class="page">
+            <label for="name">Name:<input type="text" required/></label><br>
+        </div>
+
+        <div class="container">
+            <table>
+                <tr class="box">
+                    <td class="td">Hindi: <input type="number" id="hindi" oninput="calculateTotal()"/></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">English: <input type="number" id="english" oninput="calculateTotal()"/></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Math: <input type="number" id="math" oninput="calculateTotal()" /></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Social Science: <input type="number" id="socialScience"  oninput="calculateTotal()"/></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Computer: <input type="number" id="computer" oninput="calculateTotal()"/></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Total Marks: <span id="total">0</span></h3>
+        <button onclick="calculateTotal()">Show Result</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
