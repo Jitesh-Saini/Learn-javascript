@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter J Pattern</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        #pattern {
+            white-space: pre;
+            font-family: monospace;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Letter J Pattern</h1>
+        <label for="starCount">Enter star count:</label><br>
+        <input type="number" id="starCount" min="1" value="1" placeholder="Enter star count"><br>
+        <button onclick="print_star()">Generate Pattern</button>
+        <button onclick="clearr()">Clear</button>
+        <div id="pattern"></div>
+    </div>
+
+    <script>
+        function print_star() {
+            const starCount = parseInt(document.getElementById("starCount").value);
+            const patternDiv = document.getElementById("pattern");
+
+            if (isNaN(starCount) || starCount < 1) {
+                patternDiv.textContent = "Please enter a valid number greater than or equal to 1.";
+                return;
+            }
+
+            // Define the size of the letter "J" based on star count
+            const baseHeight = 5; // Base height for starCount = 1
+            const baseWidth = 5;  // Base width for starCount = 1
+            const height = baseHeight * starCount; // Scale height
+            const width = baseWidth * starCount;  // Scale width
+            let star = "";
+
+            // Logic to generate the letter "J" with adjustable thickness
+            for (let i = 1; i <= height; i++) {
+                for (let j = 1; j <= width; j++) {
+                    // Top horizontal line
+                    if (i <= starCount) {
+                        star += "* ";
+                    }
+                    // Middle vertical line
+                    else if (j >= Math.ceil(width / 2) - Math.floor(starCount / 2) && j <= Math.ceil(width / 2) + Math.floor(starCount / 2) && i < height - starCount + 1) {
+                        star += "* ";
+                    }
+                    // Bottom horizontal line (left side)
+                    else if (i >= height - starCount + 1 && j <= Math.ceil(width / 2) + Math.floor(starCount / 2)) {
+                        star += "* ";
+                    }
+                    // Bottom left corner
+                    else if (i >= height - starCount && j <= starCount) {
+                        star += "* ";
+                    }
+                    // Empty spaces
+                    else {
+                        star += "  ";
+                    }
+                }
+                star += "\n";
+            }
+
+            // Display the pattern
+            patternDiv.textContent = star;
+        }
+
+        function clearr() {
+            document.getElementById("pattern").textContent = "";
+            document.getElementById("starCount").value = "";
+        }
+    </script>
+</body>
+</html>

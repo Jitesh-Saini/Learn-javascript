@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main{
+    background-color: rgba(0, 255, 255, 0.308);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.612);
+    
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(204, 153, 25);
+    border-radius: 10px;
+  
+}
+.box{
+    background-color: rgba(0, 30, 255, 0.781);
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.612);
+    
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(204, 153, 25);
+    border-radius: 10px;
+    margin: 30px;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.612);
+
+    
+}
+#input-box{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 17px;
+    
+}
+/* #add{
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 68, 0, 0.482);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+} */
+#task-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(204, 153, 25);
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 30px;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.612);
+
+    
+}
+.btn{
+    width: 90px;
+    height: 60px;
+    background-color:rgba(0, 30, 255, 0.781);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.612);
+
+}
+
+.task-item {
+    background-color: #f3f3f3;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 85%;
+    font-weight: bold;
+    font-size: 18px;
+    
+} 
+
+
+
+/* When Task is Completed */
+.completed{
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Buttons Styling */
+.complete-btn, .delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #4CAF50; /* Green */
+    color: white;
+}
+
+.delete-btn {
+    background: #f44336; /* Red */
+    color: white;
+}
